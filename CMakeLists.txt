@@ -53,7 +53,7 @@ add_test(simdjson_test simdjson_test)
 
 # ---- HACK A DID ACK ----
 
-execute_process(COMMAND ${CMAKE_COMMAND} -E copy_if_different "examples/basic.json" "${CMAKE_BUILD_DIR}/examples/basic.json")
+execute_process(COMMAND ${CMAKE_COMMAND} -E copy_if_different "examples/basic.json" "${CMAKE_BINARY_DIR}/examples/basic.json")
 
 # ---- Create the examples ----
 
