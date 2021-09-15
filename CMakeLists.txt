@@ -51,6 +51,10 @@ set_target_properties(simdjson_test PROPERTIES CXX_STANDARD 17)
 enable_testing() 
 add_test(simdjson_test simdjson_test)
 
+# ---- HACK A DID ACK ----
+
+execute_process(COMMAND ${CMAKE_COMMAND} -E copy_if_different "examples/basic.json" "${CMAKE_BUILD_DIR}/examples/basic.json")
+
 # ---- Create the examples ----
 
 message(STATUS "Note the fetched includes are taken from below: ${FETCHCONTENT_BASE_DIR}")
