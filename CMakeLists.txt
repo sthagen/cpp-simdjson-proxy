@@ -54,7 +54,7 @@ add_test(simdjson_test simdjson_test)
 # ---- Create the examples ----
 
 message(STATUS "Note the fetched includes are taken from below: ${FETCHCONTENT_BASE_DIR}")
-if (SIDJSON_EXAMPLES)
+if (SIMDJSON_EXAMPLES )
     macro(simdjson_examples EXAMPLENAME)
         add_executable(${EXAMPLENAME} ${ARGN})
         set_target_properties(${EXAMPLENAME} PROPERTIES FOLDER examples)
