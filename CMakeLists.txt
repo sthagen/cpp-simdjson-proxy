@@ -29,10 +29,10 @@ CPMAddPackage(
   URL_HASH SHA256=93e465fee14b53086fb5284e6e992b1d1ca4c8d9ed441d6bcbb009b34e7de305
 )
 
-if(simdjson_ADDED)
-  add_library(simdjson INTERFACE)
-  target_include_directories(simdjson INTERFACE ${simdjson_SOURCE_DIR})
-endif()
+# if(simdjson_ADDED)
+#   add_library(simdjson INTERFACE)
+#   target_include_directories(simdjson INTERFACE ${simdjson_SOURCE_DIR})
+# endif()
 
 CPMAddPackage(
   NAME doctest
@@ -59,7 +59,7 @@ if (SIDJSON_EXAMPLES)
         add_executable(${EXAMPLENAME} ${ARGN})
         set_target_properties(${EXAMPLENAME} PROPERTIES FOLDER examples)
         set_target_properties(${EXAMPLENAME} PROPERTIES CXX_STANDARD 17)
-        target_include_directories(${EXAMPLENAME} PUBLIC "${FETCHCONTENT_BASE_DIR}/simdjson-src/")
+        target_include_directories(${EXAMPLENAME} PUBLIC "${FETCHCONTENT_BASE_DIR}/simdjson-src/singleheader")
         add_test(NAME ${EXAMPLENAME} COMMAND ${EXAMPLENAME})
     endmacro()
     add_subdirectory(examples)
