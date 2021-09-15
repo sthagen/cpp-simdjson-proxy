@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 project(simdjson_proxy LANGUAGES CXX)
 
-option(SIMDJSON_EXAMPLES "whether or not to build the examples" ON)
+option(SIMDJSON_EXAMPLES "whether or not to build the examples" OFF)
 
 # ---- Fetch CPM ----
 
