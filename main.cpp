@@ -23,7 +23,7 @@ TEST_SUITE ("Example derived tests.") {
         padded_string json = padded_string::load("examples/basic.json");  // TODO(sthagen) - minimize platform and location dependency 
         ondemand::document tweets = parser.iterate(json);
         std::ostringstream os;
-        os << << uint64_t(tweets["search_metadata"]["count"]) << " results.";
+        os << uint64_t(tweets["search_metadata"]["count"]) << " results.";
         SUBCASE("The result report is not empty.") {
             REQUIRE(!os.str().empty());
         }
